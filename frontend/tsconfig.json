@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                             // The target ECMAScript version
+      "lib": ["DOM", "DOM.Iterable", "ESNext"],    // Include browser and ESNext APIs
+      "allowJs": false,                            // Disallow plain JavaScript files
+      "skipLibCheck": true,                        // Skip checking declaration files
+      "strict": true,                              // Enable strict type checking
+      "forceConsistentCasingInFileNames": true,    // Ensure consistent file naming
+      "esModuleInterop": true,                     // Enable ES6 module interop
+      "module": "ESNext",                          // Use ESNext module system
+      "moduleResolution": "Node",                 // Resolve modules using Node.js logic
+      "resolveJsonModule": true,                   // Allow importing .json files
+      "isolatedModules": true,                     // Perform per-file transpilation
+      "noEmit": true,                              // Don't emit output files
+      "jsx": "react-jsx"                           // Use React 17+ JSX runtime
+    },
+    "include": ["src"],                            // Include all files in src directory
+    "exclude": ["node_modules", "build"]          // Exclude node_modules and build directories
+  }
+  
