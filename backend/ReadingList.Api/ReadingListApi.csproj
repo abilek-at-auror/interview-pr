@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <!-- Target framework -->
+    <TargetFramework>net7.0</TargetFramework>
+    
+    <!-- Enable nullable reference types -->
+    <Nullable>enable</Nullable>
+    
+    <!-- Enable implicit global usings (for cleaner code in modern .NET versions) -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+    <!-- Optional: Optimize builds -->
+    <Optimize>true</Optimize>
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+
+  <!-- Dependencies -->
+  <ItemGroup>
+    <!-- Add project dependencies -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" /> <!-- For Swagger API docs -->
+  </ItemGroup>
+
+  <!-- Optional: For unit testing (if included in the same project) -->
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+    <PackageReference Include="Moq" Version="4.18.4" />
+  </ItemGroup>
+
+</Project>
