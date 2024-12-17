@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using ReadingListApi.Models;
 
 namespace ReadingListApi.Services
 {
@@ -61,15 +62,5 @@ namespace ReadingListApi.Services
             _readingList.Remove(itemToRemove);
             return true;
         }
-    }
-
-    // The ReadingItem model
-    public class ReadingItem
-    {
-        public int Id { get; set; }         // Unique identifier for the item
-        public string Title { get; set; }  // Title of the book
-        public string Author { get; set; } // Author of the book
-        public string Genre { get; set; }  // Genre of the book
-        public bool IsRead { get; set; }   // Indicates if the book has been read
     }
 }
