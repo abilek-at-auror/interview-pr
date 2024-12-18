@@ -33,3 +33,13 @@ export const updateReadingItem = async (id: number, updatedItem: ReadingItem): P
 export const deleteReadingItem = async (id: number): Promise<void> => {
   await axios.delete(`${API_BASE_URL}/${id}`);
 };
+
+// Share a reading list
+export const shareReadingList = async (listId: number, email: string) => {
+  const response = await fetch(`/api/readinglist/share/${listId}/${email}`, {
+    method: "POST",
+  });
+  if (!response.ok) {
+    throw new Error("Failed to share the reading list");
+  }
+};

@@ -62,5 +62,11 @@ namespace ReadingListApi.Services
             _readingList.Remove(itemToRemove);
             return true;
         }
+
+        public void ShareReadingList(int listId, string email)
+        {
+            Console.WriteLine($"Sharing reading list {listId} with {email}");
+            // TODO: Implement email sharing functionality
+        }
     }
 }

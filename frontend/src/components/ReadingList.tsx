@@ -15,6 +15,20 @@ const ReadingList: React.FC = () => {
     genre: "",
     isRead: false
   });
+  const [email, setEmail] = useState("");
+  const [showModal, setShowModal] = useState(false);
+
+  const shareList = async (listId: number) => {
+    try {
+      await fetch(`/api/readinglist/share/${listId}/${email}`, {
+        method: "POST"
+      });
+      alert("List shared!");
+    } catch (error) {
+      console.error(error);
+      alert("Failed to share list");
+    }
+  };
 
   // Fetch reading list on component mount
   useEffect(() => {
@@ -96,6 +110,20 @@ const ReadingList: React.FC = () => {
                 Mark as {item.isRead ? "Unread" : "Read"}
               </button>
               <button onClick={() => handleDeleteItem(item.id)}>Delete</button>
+              <button onClick={() => setShowModal(true)}>Share List</button>
+              {showModal && (
+                <div className="modal">
+                  <h2>Share Reading List</h2>
+                  <input
+                    type="email"
+                    placeholder="Enter email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <button onClick={() => shareList(1)}>Share</button>
+                  <button onClick={() => setShowModal(false)}>Close</button>
+                </div>
+              )}
             </li>
           ))}
         </ul>
