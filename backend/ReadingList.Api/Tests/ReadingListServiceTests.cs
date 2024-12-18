@@ -1,6 +1,7 @@
 using System.Linq;
 using Xunit;
 using ReadingListApi.Services;
+using ReadingListApi.Models;
 
 public class ReadingListServiceTests
 {

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using ReadingListApi.Services;
+using ReadingListApi.Models;
 
 namespace ReadingListApi.Controllers
 {
