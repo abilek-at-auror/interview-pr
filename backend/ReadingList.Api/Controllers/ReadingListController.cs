@@ -55,5 +55,16 @@ namespace ReadingListApi.Controllers
 
             return NoContent();
         }
+
+        [HttpPost("share/{listId}/{email}")]
+        public IActionResult ShareList(int listId, string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return BadRequest("Email is required");
+            }
+
+            return Ok($"Shared list {listId} with {email}");
+        }
     }
 }

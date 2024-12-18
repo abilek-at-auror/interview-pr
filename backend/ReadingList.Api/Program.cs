@@ -7,4 +7,6 @@ var app = builder.Build();
 app.UseRouting();
 app.MapControllers();
 
+app.MapGet("/debug", () => "The app is running!");
+
 app.Run();
