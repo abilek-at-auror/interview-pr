@@ -237,37 +237,10 @@ _Pvt_Extensions
 
 *.orig
 **/storybook-static
-**/.idea/workspace.xml
-**/.idea/dataSources*
-**/.idea/contentModel.xml
-**/.idea/shelf/
-**/.idea/markdown*
 # macOS only - stores custom attributes of its containing folder, eg position of icons
 **/.DS_Store
 
 /GitExtensions.settings.backup
 
 # Rider files
-.idea/.idea.Auror.Fawkes/.idea/modules.xml
-.idea/.idea.Auror.Fawkes/.idea/riderModule.iml
-.idea/.idea.Auror.Fawkes/.idea/projectSettingsUpdater.xml
-.idea/.idea.Auror.Fawkes.RoslynAnalyzers/.idea/modules.xml
-.idea/.idea.Auror.Fawkes.RoslynAnalyzers/.idea/projectSettingsUpdater.xml
-.idea/.idea.Auror.Fawkes.RoslynAnalyzers/riderModule.iml
-.idea/.idea.Auror.Fawkes/.idea/modules.xml
-Auror.Fawkes.Functions.Lpr/.idea/
-
-# Ephemeral output (experiment results, etc.)
-**/experiment-results/
-Auror.Fawkes.Web/ClientApp/acceptanceTest/cypress.env.json
-Auror.Fawkes.Web/ClientApp/acceptanceTest/cypress.multi.env.json
-Auror.Fawkes.Web/ClientApp/acceptanceTest/cypress/downloads/
-Auror.Fawkes.Web/ClientApp/acceptanceTest/runner-results
-appsettings.local.json
-package.json.bak
-**/local.settings.json
-**/.env.local
-
-!Auror.Fawkes.RoslynAnalyzers/bin/Release/netstandard2.0/Auror.Fawkes.RoslynAnalyzers.dll
-**/.idea/sonarlint.xml
-**/.idea/sonarlint/
+.idea/
